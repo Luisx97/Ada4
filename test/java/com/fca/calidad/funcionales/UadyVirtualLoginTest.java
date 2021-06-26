@@ -27,23 +27,21 @@ public class UadyVirtualLoginTest {
   @Test
   public void unsuccessfully() throws Exception {
 	  driver.get("https://www.google.com/search?q=google&oq=google&aqs=chrome.0.69i59j0i433l3j69i60l4.1645j0j7&sourceid=chrome&ie=UTF-8");
-	  driver.findElement(By.xpath("//div[@id='rso']/div/div/div/div/div/a/h3")).click();
-	  driver.findElement(By.name("q")).clear();
-	  driver.findElement(By.name("q")).sendKeys("uady virtual es");
-	  driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
-	  driver.findElement(By.xpath("//div[@id='rso']/div/div/div/div/div/a/h3")).click();
-	  driver.findElement(By.xpath("//img[@alt='UADY Virtual ES']")).click();
-	  driver.findElement(By.id("username")).click();
-	  driver.findElement(By.id("username")).click();
-	  driver.findElement(By.id("username")).clear();
-	  driver.findElement(By.id("username")).sendKeys("null");
-	  driver.findElement(By.id("password")).clear();
-	  driver.findElement(By.id("password")).sendKeys("null");
-	  driver.findElement(By.id("login")).submit();
-	  // Warning: assertTextPresent may require manual changes
-	  assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*$"));
-	  // Warning: assertTextPresent may require manual changes
-	  assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*$"));
+	    driver.findElement(By.xpath("//div[@id='rso']/div/div/div/div/div/a/h3")).click();
+	    driver.findElement(By.name("q")).clear();
+	    driver.findElement(By.name("q")).sendKeys("uady virtual es");
+	    driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
+	    driver.findElement(By.xpath("//div[@id='rso']/div/div/div/div/a/h3")).click();
+	    driver.findElement(By.xpath("//img[@alt='UADY Virtual ES']")).click();
+	    driver.findElement(By.id("username")).click();
+	    driver.findElement(By.id("username")).click();
+	    driver.findElement(By.id("username")).clear();
+	    driver.findElement(By.id("username")).sendKeys("a16211439");
+	    driver.findElement(By.id("password")).clear();
+	    driver.findElement(By.id("password")).sendKeys("123");
+	    driver.findElement(By.id("login")).submit();
+	    // Warning: assertTextPresent may require manual changes
+	    assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*$"));
   }
   @Test
   public void successfully() throws Exception {
@@ -57,9 +55,9 @@ public class UadyVirtualLoginTest {
     driver.findElement(By.id("username")).click();
     driver.findElement(By.id("username")).click();
     driver.findElement(By.id("username")).clear();
-    driver.findElement(By.id("username")).sendKeys("A16211439");
+    driver.findElement(By.id("username")).sendKeys("");
     driver.findElement(By.id("password")).clear();
-    driver.findElement(By.id("password")).sendKeys("Alet2020");
+    driver.findElement(By.id("password")).sendKeys("");
     driver.findElement(By.id("login")).submit();
     // Warning: assertTextPresent may require manual changes
     assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*$"));

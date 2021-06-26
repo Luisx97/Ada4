@@ -22,7 +22,7 @@ public class EleccionesTest {
   @Before
   public void setUp() throws Exception {
 	  ///home/luis/Downloads/chromedriver_linux64
-	System.setProperty("webdriver.chrome.driver","/home/luis/Downloads/chromedriver_linux64/chromedriver");
+	System.setProperty("webdriver.chrome.driver","/home/luis/Downloads/chromedriver_linux64/chromedrive");
     driver = new ChromeDriver();
     baseUrl = "https://www.google.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
